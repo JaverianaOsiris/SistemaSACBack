@@ -1,0 +1,174 @@
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\appsettings.json
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\WebApiSAC.exe
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\WebApiSAC.deps.json
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\WebApiSAC.runtimeconfig.json
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\WebApiSAC.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\WebApiSAC.pdb
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\WebApiSAC.csproj.AssemblyReference.cache
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\WebApiSAC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\WebApiSAC.AssemblyInfoInputs.cache
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\WebApiSAC.AssemblyInfo.cs
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\WebApiSAC.csproj.CoreCompileInputs.cache
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\WebApiSAC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\WebApiSAC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\staticwebassets\msbuild.WebApiSAC.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\staticwebassets\msbuild.build.WebApiSAC.props
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.WebApiSAC.props
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.WebApiSAC.props
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\scopedcss\bundle\WebApiSAC.styles.css
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\WebApiSAC.csproj.CopyComplete
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\WebApiSAC.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\refint\WebApiSAC.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\WebApiSAC.pdb
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\WebApiSAC.genruntimeconfig.cache
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\obj\Debug\net7.0\ref\WebApiSAC.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Core.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Infrastructure.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Core.pdb
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Infrastructure.pdb
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Humanizer.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\WebApiSAC\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\appsettings.json
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\WebApiSAC.exe
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\WebApiSAC.deps.json
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\WebApiSAC.runtimeconfig.json
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\WebApiSAC.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\WebApiSAC.pdb
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Humanizer.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Core.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Infrastructure.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Core.pdb
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\bin\Debug\net7.0\Infrastructure.pdb
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\WebApiSAC.csproj.AssemblyReference.cache
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\WebApiSAC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\WebApiSAC.AssemblyInfoInputs.cache
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\WebApiSAC.AssemblyInfo.cs
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\WebApiSAC.csproj.CoreCompileInputs.cache
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\WebApiSAC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\WebApiSAC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\staticwebassets\msbuild.WebApiSAC.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\staticwebassets\msbuild.build.WebApiSAC.props
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.WebApiSAC.props
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.WebApiSAC.props
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\scopedcss\bundle\WebApiSAC.styles.css
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\WebApiSAC.csproj.CopyComplete
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\WebApiSAC.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\refint\WebApiSAC.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\WebApiSAC.pdb
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\WebApiSAC.genruntimeconfig.cache
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\WebApiSAC\obj\Debug\net7.0\ref\WebApiSAC.dll

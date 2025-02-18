@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiSAC", "WebApiSAC\WebApiSAC.csproj", "{724B1DD3-F2EB-4E73-B54F-1363FF788383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{E82794F0-5FA9-4EB8-B9A8-B0CEA8FE5C38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{D7EB4E4E-23D1-427B-BEBC-CE2AD95BC37B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{724B1DD3-F2EB-4E73-B54F-1363FF788383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724B1DD3-F2EB-4E73-B54F-1363FF788383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724B1DD3-F2EB-4E73-B54F-1363FF788383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724B1DD3-F2EB-4E73-B54F-1363FF788383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82794F0-5FA9-4EB8-B9A8-B0CEA8FE5C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82794F0-5FA9-4EB8-B9A8-B0CEA8FE5C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82794F0-5FA9-4EB8-B9A8-B0CEA8FE5C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82794F0-5FA9-4EB8-B9A8-B0CEA8FE5C38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7EB4E4E-23D1-427B-BEBC-CE2AD95BC37B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7EB4E4E-23D1-427B-BEBC-CE2AD95BC37B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7EB4E4E-23D1-427B-BEBC-CE2AD95BC37B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7EB4E4E-23D1-427B-BEBC-CE2AD95BC37B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9608492F-3565-4001-B9B9-F0257A6E0AAF}
+	EndGlobalSection
+EndGlobal

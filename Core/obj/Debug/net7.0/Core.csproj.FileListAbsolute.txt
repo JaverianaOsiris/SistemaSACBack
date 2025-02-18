@@ -1,0 +1,24 @@
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\bin\Debug\net7.0\Core.deps.json
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\bin\Debug\net7.0\Core.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\bin\Debug\net7.0\Core.pdb
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\obj\Debug\net7.0\Core.csproj.AssemblyReference.cache
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\obj\Debug\net7.0\Core.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\obj\Debug\net7.0\refint\Core.dll
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\obj\Debug\net7.0\Core.pdb
+C:\Users\ingjh\Documents\ESP. ARQUITECTURA EMPRESARIAL DE SW\Semestre II\Ingenieria de software\Proyecto SW\WebApiSAC\Core\obj\Debug\net7.0\ref\Core.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\bin\Debug\net7.0\Core.deps.json
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\bin\Debug\net7.0\Core.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\bin\Debug\net7.0\Core.pdb
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\obj\Debug\net7.0\Core.csproj.AssemblyReference.cache
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\obj\Debug\net7.0\Core.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\obj\Debug\net7.0\refint\Core.dll
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\obj\Debug\net7.0\Core.pdb
+C:\Users\ingjh\Documents\ESP_ARQUITECTURA_EMPRESARIAL_DE_SW\SemestreII\IngenieriaDeSoftware\ProyectoSW\SistemaSACBack\Core\obj\Debug\net7.0\ref\Core.dll
