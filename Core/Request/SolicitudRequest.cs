@@ -1,8 +1,8 @@
 ﻿using Core.Entities;
 
-namespace WebApiSAC.Dtos;
+namespace Core.Request;
 
-public class SolicitudReqDto
+public class SolicitudRequest
 {
     public int so_id { get; set; }
     public int so_ts_id { get; set; }

@@ -9,7 +9,7 @@ public class Solicitudes
     public string so_numero_solicitud { get; set; }
     public int so_ts_id { get; set; }
     public string so_descripcion { get; set; }
-    public DateTime so_fecha_creacion { get; set; }
+    public DateTime so_fecha_creacion { get; set; } = DateTime.Now;
     // Navegación a la entidad Tipos_Solicitudes
     public Tipos_Solicitudes Tipos_Solicitudes { get; set; } // Relación de navegación
 }

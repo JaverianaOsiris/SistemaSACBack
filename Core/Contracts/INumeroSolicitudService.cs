@@ -6,7 +6,7 @@ namespace Core.Contracts
     public interface INumeroSolicitudService
     {
         #region CRUD
-        public Task<bool> Add(NumeroSolicitudRequest request, CancellationToken cancellationToken);
+        public Task<NumeroSolicitudResponse> Add(CancellationToken cancellationToken);
         public Task<bool> Delete(int id, CancellationToken cancellationToken);
         public Task<bool> Update(int id, NumeroSolicitudRequest request, CancellationToken cancellationToken);
         public Task<IEnumerable<NumeroSolicitudResponse>> GetAll();

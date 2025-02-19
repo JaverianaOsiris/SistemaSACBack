@@ -3,6 +3,7 @@ using Core.Contracts;
 using Core.Interfaces;
 using Infrastructure.Config;
 using Infrastructure.Data;
+using Infrastructure.Repositories;
 using Infrastructure.Services;
 using Infrastructure.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
@@ -30,6 +31,8 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IAppConfig, AppConfig>();
 builder.Services.AddScoped<INumeroSolicitudService, NumeroSolicitudService>();
+builder.Services.AddScoped<ISolicitudService, SolicitudService>();
+
 
 var app = builder.Build();
 

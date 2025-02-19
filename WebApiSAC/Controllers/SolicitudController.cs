@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using AutoMapper.Internal;
 using Core.Contracts;
+using Core.Entities;
 using Core.Request;
 using Core.Response;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +11,10 @@ namespace WebApiSAC.Controllers
 {
     public class SolicitudController : BaseApiController
     {
-        private readonly INumeroSolicitudService _service;
+        private readonly ISolicitudService _service;
         private readonly IMapper _mapper;
 
-        public SolicitudController(INumeroSolicitudService service, IMapper mapper)
+        public SolicitudController(ISolicitudService service, IMapper mapper)
         {
             _service = service;
             _mapper = mapper;
@@ -23,32 +24,29 @@ namespace WebApiSAC.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            IEnumerable<NumeroSolicitudResponse> resultResponse = await _service.GetAll();
+            IEnumerable<SolicitudResponse> resultResponse = await _service.GetAll();
 
             var result = _mapper.Map<IEnumerable<NumeroSolicitudResDto>>(resultResponse);
             return Ok(result);
-            //return Json(new { data = result });
         }
 
         [HttpPost]
        // [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Upsert(NumeroSolicitudReqDto numero, CancellationToken cancellationToken)
+        public async Task<IActionResult> Upsert(SolicitudReqDto solicitudReq, CancellationToken cancellationToken)
         {
-            var numReq = _mapper.Map<NumeroSolicitudRequest>(numero);
-            if (numReq.ns_id == 0)
+            var numReq = _mapper.Map<SolicitudRequest>(solicitudReq);
+            if (numReq.so_id == 0)
             {
                     
-                await _service.Add(numReq, cancellationToken);
-                    
+                var solicitud = await _service.Add(numReq, cancellationToken);
+                return Ok(solicitud);
+
             }
             else
             {
-                await _service.Update(numReq.ns_id, numReq, cancellationToken);
+                var solicitud = await _service.Update(numReq.so_id, numReq, cancellationToken);
+                return Ok(solicitud);
             }
-
-            return Ok("Bien");
-
-
         }
 
         #endregion

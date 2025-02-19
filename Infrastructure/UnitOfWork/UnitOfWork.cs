@@ -8,10 +8,12 @@ public class UnitOfWork:IUnitOfWork
 {
     private readonly ApplicationDbContext _context;
     public INumeroSolicitudRepository NumeroSolicitudRepository { get; private set; }
+    public ISolicitudRepository SolicitudRepository { get; private set; }
 
     public UnitOfWork(ApplicationDbContext context)
     {
         _context = context;
+        SolicitudRepository = new SolicitudRepository(_context);
         NumeroSolicitudRepository = new NumeroSolicitudRepository(_context);
     }
 
