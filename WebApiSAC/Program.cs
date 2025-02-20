@@ -3,10 +3,11 @@ using Core.Contracts;
 using Core.Interfaces;
 using Infrastructure.Config;
 using Infrastructure.Data;
-using Infrastructure.Repositories;
 using Infrastructure.Services;
 using Infrastructure.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
+using System;
 using WebApiSAC.Profiles;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,8 +19,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
-                                                opciones.UseSqlServer("name=DefaultConnection"));
+builder.Services.AddDbContextPool<ApplicationDbContext>(options =>
+{
+    var connetionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    options.UseMySql(connetionString, ServerVersion.AutoDetect(connetionString));
+});
 
 var mapperConfig = new MapperConfiguration(mc =>
 {
