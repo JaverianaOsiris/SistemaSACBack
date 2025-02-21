@@ -32,11 +32,11 @@ builder.WebHost.ConfigureKestrel(options =>
     options.ListenAnyIP(5000);
 });
 
-var corsPoliciName = "AllowAll";
+var corsPolicyName = "AllowAll";
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(corsPoliciName, policy =>
+    options.AddPolicy(corsPolicyName, policy =>
     {
         policy.AllowAnyOrigin()
                 .AllowAnyMethod()
@@ -72,6 +72,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(corsPolicyName);
 
 app.UseHttpsRedirection();
 
