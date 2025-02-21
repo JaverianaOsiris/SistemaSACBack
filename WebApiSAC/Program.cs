@@ -32,6 +32,18 @@ builder.WebHost.ConfigureKestrel(options =>
     options.ListenAnyIP(5000);
 });
 
+var corsPoliciName = "AllowAll";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(corsPoliciName, policy =>
+    {
+        policy.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+    });
+});
+
 var mapperConfig = new MapperConfiguration(mc =>
 {
     mc.AddProfile(new MappingProfiles());
