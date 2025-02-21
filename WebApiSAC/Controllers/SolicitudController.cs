@@ -21,6 +21,12 @@ namespace WebApiSAC.Controllers
         }
 
         #region API
+        [HttpGet("ping")]
+        public IActionResult Ping()
+        {
+            return Ok("Escuchando");
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {

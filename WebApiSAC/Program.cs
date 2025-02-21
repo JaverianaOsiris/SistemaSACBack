@@ -25,6 +25,13 @@ builder.Services.AddDbContextPool<ApplicationDbContext>(options =>
     options.UseMySql(connetionString, ServerVersion.AutoDetect(connetionString));
 });
 
+// Configura Kestrel para escuchar en el puerto 5000
+builder.WebHost.ConfigureKestrel(options =>
+{
+    // Escucha en todas las interfaces en el puerto 5000
+    options.ListenAnyIP(5000);
+});
+
 var mapperConfig = new MapperConfiguration(mc =>
 {
     mc.AddProfile(new MappingProfiles());
