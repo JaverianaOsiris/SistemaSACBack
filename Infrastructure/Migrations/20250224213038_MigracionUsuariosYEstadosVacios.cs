@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class MigracionInicialMySql : Migration
+    public partial class MigracionUsuariosYEstadosVacios : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -70,6 +70,21 @@ namespace Infrastructure.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Estados_Solicitudes",
+                columns: table => new
+                {
+                    es_id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    nombre_estado = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Estados_Solicitudes", x => x.es_id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Numeros_Solicitudes",
                 columns: table => new
                 {
@@ -82,6 +97,21 @@ namespace Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Numeros_Solicitudes", x => x.ns_id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Tipo_Identificacions",
+                columns: table => new
+                {
+                    ti_id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    descripcion = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tipo_Identificacions", x => x.ti_id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -231,6 +261,36 @@ namespace Infrastructure.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Usuarios",
+                columns: table => new
+                {
+                    us_id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    us_nombre = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    us_apellido = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    us_ti_id = table.Column<int>(type: "int", nullable: false),
+                    us_identificacion = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    telefono = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    correo = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Usuarios", x => x.us_id);
+                    table.ForeignKey(
+                        name: "FK_Usuarios_Tipo_Identificacions_us_ti_id",
+                        column: x => x.us_ti_id,
+                        principalTable: "Tipo_Identificacions",
+                        principalColumn: "ti_id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Solicitudes",
                 columns: table => new
                 {
@@ -241,11 +301,17 @@ namespace Infrastructure.Migrations
                     so_ts_id = table.Column<int>(type: "int", nullable: false),
                     so_descripcion = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    so_fecha_creacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    so_fecha_creacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    so_es_id = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Solicitudes", x => x.so_id);
+                    table.ForeignKey(
+                        name: "FK_Solicitudes_Estados_Solicitudes_so_es_id",
+                        column: x => x.so_es_id,
+                        principalTable: "Estados_Solicitudes",
+                        principalColumn: "es_id");
                     table.ForeignKey(
                         name: "FK_Solicitudes_Tipos_Solicitudes_so_ts_id",
                         column: x => x.so_ts_id,
@@ -293,9 +359,19 @@ namespace Infrastructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Solicitudes_so_es_id",
+                table: "Solicitudes",
+                column: "so_es_id");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Solicitudes_so_ts_id",
                 table: "Solicitudes",
                 column: "so_ts_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Usuarios_us_ti_id",
+                table: "Usuarios",
+                column: "us_ti_id");
         }
 
         /// <inheritdoc />
@@ -323,13 +399,22 @@ namespace Infrastructure.Migrations
                 name: "Solicitudes");
 
             migrationBuilder.DropTable(
+                name: "Usuarios");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
+                name: "Estados_Solicitudes");
+
+            migrationBuilder.DropTable(
                 name: "Tipos_Solicitudes");
+
+            migrationBuilder.DropTable(
+                name: "Tipo_Identificacions");
         }
     }
 }

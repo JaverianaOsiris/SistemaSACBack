@@ -3,6 +3,7 @@ using System;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -11,22 +12,42 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250220014735_MigracionInicialMySql")]
-    partial class MigracionInicialMySql
+    [Migration("20250224214426_MigracionCorreoTelUsuarios")]
+    partial class MigracionCorreoTelUsuarios
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.20")
+                .HasAnnotation("ProductVersion", "8.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
+
+            modelBuilder.Entity("Core.Entities.Estados_Solicitudes", b =>
+                {
+                    b.Property<int>("es_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("es_id"));
+
+                    b.Property<string>("nombre_estado")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("es_id");
+
+                    b.ToTable("Estados_Solicitudes");
+                });
 
             modelBuilder.Entity("Core.Entities.Numeros_Solicitudes", b =>
                 {
                     b.Property<int>("ns_id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ns_id"));
 
                     b.Property<DateTime>("ns_fecha_creacion")
                         .HasColumnType("datetime(6)");
@@ -45,8 +66,13 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("so_id"));
+
                     b.Property<string>("so_descripcion")
                         .HasColumnType("longtext");
+
+                    b.Property<int?>("so_es_id")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("so_fecha_creacion")
                         .HasColumnType("datetime(6)");
@@ -59,9 +85,27 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("so_id");
 
+                    b.HasIndex("so_es_id");
+
                     b.HasIndex("so_ts_id");
 
                     b.ToTable("Solicitudes");
+                });
+
+            modelBuilder.Entity("Core.Entities.Tipo_Identificacion", b =>
+                {
+                    b.Property<int>("ti_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ti_id"));
+
+                    b.Property<string>("descripcion")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("ti_id");
+
+                    b.ToTable("Tipo_Identificacions");
                 });
 
             modelBuilder.Entity("Core.Entities.Tipos_Solicitudes", b =>
@@ -69,6 +113,8 @@ namespace Infrastructure.Migrations
                     b.Property<int>("ts_id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ts_id"));
 
                     b.Property<string>("ts_descripcion")
                         .HasColumnType("longtext");
@@ -83,6 +129,40 @@ namespace Infrastructure.Migrations
                     b.HasKey("ts_id");
 
                     b.ToTable("Tipos_Solicitudes");
+                });
+
+            modelBuilder.Entity("Core.Entities.Usuarios", b =>
+                {
+                    b.Property<int>("us_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("us_id"));
+
+                    b.Property<string>("us_apellido")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("us_correo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("us_identificacion")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("us_nombre")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("us_telefono")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("us_ti_id")
+                        .HasColumnType("int");
+
+                    b.HasKey("us_id");
+
+                    b.HasIndex("us_ti_id");
+
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -116,6 +196,8 @@ namespace Infrastructure.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("longtext");
@@ -204,6 +286,8 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
                     b.Property<string>("ClaimType")
                         .HasColumnType("longtext");
 
@@ -279,13 +363,30 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Core.Entities.Solicitudes", b =>
                 {
+                    b.HasOne("Core.Entities.Estados_Solicitudes", "Estados_Solicitudes")
+                        .WithMany()
+                        .HasForeignKey("so_es_id");
+
                     b.HasOne("Core.Entities.Tipos_Solicitudes", "Tipos_Solicitudes")
                         .WithMany()
                         .HasForeignKey("so_ts_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Estados_Solicitudes");
+
                     b.Navigation("Tipos_Solicitudes");
+                });
+
+            modelBuilder.Entity("Core.Entities.Usuarios", b =>
+                {
+                    b.HasOne("Core.Entities.Tipo_Identificacion", "Tipo_Identificacion")
+                        .WithMany()
+                        .HasForeignKey("us_ti_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Tipo_Identificacion");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

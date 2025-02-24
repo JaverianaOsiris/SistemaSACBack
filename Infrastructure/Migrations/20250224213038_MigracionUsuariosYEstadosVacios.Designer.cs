@@ -4,6 +4,7 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250224213038_MigracionUsuariosYEstadosVacios")]
+    partial class MigracionUsuariosYEstadosVacios
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -136,20 +139,20 @@ namespace Infrastructure.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("us_id"));
 
-                    b.Property<string>("us_apellido")
+                    b.Property<string>("correo")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("us_correo")
-                        .IsRequired()
+                    b.Property<string>("telefono")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("us_apellido")
                         .HasColumnType("longtext");
 
                     b.Property<string>("us_identificacion")
                         .HasColumnType("longtext");
 
                     b.Property<string>("us_nombre")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("us_telefono")
                         .HasColumnType("longtext");
 
                     b.Property<int>("us_ti_id")
