@@ -26,11 +26,11 @@ builder.Services.AddDbContextPool<ApplicationDbContext>(options =>
 });
 
 // Configura Kestrel para escuchar en el puerto 5000
-builder.WebHost.ConfigureKestrel(options =>
-{
-    // Escucha en todas las interfaces en el puerto 5000
-    options.ListenAnyIP(5000);
-});
+//builder.WebHost.ConfigureKestrel(options =>
+//{
+//    // Escucha en todas las interfaces en el puerto 5000
+//    options.ListenAnyIP(5000);
+//});
 
 var corsPolicyName = "AllowAll";
 
