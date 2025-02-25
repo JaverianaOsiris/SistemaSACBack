@@ -12,17 +12,41 @@ public class SolicitudService : ISolicitudService
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
     private readonly INumeroSolicitudService _numeroSolicitudService;
+    private readonly IUsuarioService _usuarioService;
 
-    public SolicitudService(IUnitOfWork unitOfWork, IMapper mapper, INumeroSolicitudService numeroSolicitudService)
+    public SolicitudService(IUnitOfWork unitOfWork, IMapper mapper, INumeroSolicitudService numeroSolicitudService, IUsuarioService usuarioService)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _numeroSolicitudService = numeroSolicitudService;
+        _usuarioService = usuarioService;
     }
 
     public async Task<SolicitudResponse> Add(SolicitudRequest request, CancellationToken cancellationToken)
     {
         Solicitudes entity = _mapper.Map<Solicitudes>(request);
+
+        var usuario = await _usuarioService.GetByEmail(request.Usuario.us_correo) ;
+
+        if(usuario is not null)
+        {
+            entity.so_us_id = usuario.us_id;
+        }
+        else
+        {
+            UsuarioRequest User = _mapper.Map<UsuarioRequest>(request.Usuario);
+            var newUser = await _usuarioService.Add(User, cancellationToken);
+
+
+            if (newUser is not null)
+            {
+                entity.so_us_id = newUser.us_id;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         var numeroSolicitud = await _numeroSolicitudService.Add(cancellationToken);
 
@@ -33,7 +57,9 @@ public class SolicitudService : ISolicitudService
 
         if(result > 0)
         {
-            var entityResponse = _mapper.Map<SolicitudResponse>(entity);
+            var entidadNueva = await GetById(entity.so_id);
+
+            var entityResponse = _mapper.Map<SolicitudResponse>(entidadNueva);
             return entityResponse;
         }
         else
@@ -58,7 +84,8 @@ public class SolicitudService : ISolicitudService
 
     public async Task<SolicitudResponse> GetById(int id)
     {
-        Solicitudes? entity = await _unitOfWork.SolicitudRepository.ReadById(x => x.so_id.Equals(id), includeProperties: string.Empty);
+        Solicitudes? entity = await _unitOfWork.SolicitudRepository.ReadById(x => x.so_id.Equals(id),
+                                                                            includeProperties: "Estados_Solicitudes,Tipos_Solicitudes");
         SolicitudResponse response = _mapper.Map<SolicitudResponse>(entity);
         return response;
     }

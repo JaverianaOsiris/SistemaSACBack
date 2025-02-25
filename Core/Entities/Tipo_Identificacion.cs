@@ -6,5 +6,5 @@ public class Tipo_Identificacion
 {
     [Key]
     public int ti_id { get; set; }
-    public string descripcion { get; set; }
+    public string ti_descripcion { get; set; }
 }

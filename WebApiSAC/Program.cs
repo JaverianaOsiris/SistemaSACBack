@@ -55,6 +55,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IAppConfig, AppConfig>();
 builder.Services.AddScoped<INumeroSolicitudService, NumeroSolicitudService>();
 builder.Services.AddScoped<ISolicitudService, SolicitudService>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 
 var app = builder.Build();

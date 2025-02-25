@@ -32,6 +32,10 @@ public class ApplicationDbContext : IdentityDbContext
                 .HasOne(s => s.Estados_Solicitudes)  // Relación con Estados Solicitudes
                 .WithMany()  // Un tipo de solicitud puede tener muchos estados
                 .HasForeignKey(s => s.so_es_id);
+        builder.Entity<Solicitudes>()
+                .HasOne(s => s.Usuarios)  // Relación con Usuarios
+                .WithMany()  // Un tipo de soliciutd puede tener muchos usaurios
+                .HasForeignKey(s => s.so_us_id);
 
         builder.Entity<Usuarios>()
                 .HasOne(s => s.Tipo_Identificacion)  // Relación con Estados Solicitudes
