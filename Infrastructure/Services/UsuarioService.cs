@@ -12,6 +12,7 @@ public class UsuarioService : IUsuarioService
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
+    string relationsUser = "Tipo_Identificacion";
     public UsuarioService(IUnitOfWork unitOfWork, IMapper mapper)
     {
         _unitOfWork = unitOfWork;
@@ -45,21 +46,22 @@ public class UsuarioService : IUsuarioService
 
     public async Task<IEnumerable<UsuarioResponse>> GetAll()
     {
-        IEnumerable<Usuarios?> data = await _unitOfWork.UsuarioRepository.ReadAll();
+        IEnumerable<Usuarios?> data = await _unitOfWork.UsuarioRepository.ReadAll(includeProperties: relationsUser);
         IEnumerable<UsuarioResponse> response = _mapper.Map<IEnumerable<UsuarioResponse>>(data);
         return response;
     }
 
     public async Task<UsuarioResponse> GetById(int id)
     {
-        Usuarios? entity = await _unitOfWork.UsuarioRepository.ReadById(x => x.us_id.Equals(id), includeProperties: "Tipo_Identificacion");
+        Usuarios? entity = await _unitOfWork.UsuarioRepository.ReadById(x => x.us_id.Equals(id), includeProperties: relationsUser);
         UsuarioResponse response = _mapper.Map<UsuarioResponse>(entity);
         return response;
     }
 
     public async Task<UsuarioResponse> GetByEmail(string correo)
     {
-        Usuarios? entity = await _unitOfWork.UsuarioRepository.ReadById(x => x.us_correo.Equals(correo), includeProperties: "Tipo_Identificacion");
+        Usuarios? entity = await _unitOfWork.UsuarioRepository.ReadById(x => x.us_correo.Equals(correo), includeProperties: relationsUser);
+
         UsuarioResponse response = _mapper.Map<UsuarioResponse>(entity);
         return response;
     }

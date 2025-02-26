@@ -11,5 +11,7 @@ public interface ISolicitudService
     public Task<bool> Update(int id, SolicitudRequest request, CancellationToken cancellationToken);
     public Task<IEnumerable<SolicitudResponse>> GetAll();
     public Task<SolicitudResponse> GetById(int id);
+    public Task<IEnumerable<SolicitudResponse>> GetByNumber(string number);
+    public Task<IEnumerable<SolicitudResponse>> GetByEmail(string email);
     #endregion
 }

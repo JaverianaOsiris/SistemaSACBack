@@ -4,6 +4,7 @@ using Core.Entities;
 using Core.Interfaces;
 using Core.Request;
 using Core.Response;
+using System.Collections.Generic;
 
 namespace Infrastructure.Services;
 
@@ -13,6 +14,7 @@ public class SolicitudService : ISolicitudService
     private readonly IMapper _mapper;
     private readonly INumeroSolicitudService _numeroSolicitudService;
     private readonly IUsuarioService _usuarioService;
+    string relationsUsers = "Estados_Solicitudes,Tipos_Solicitudes,Usuarios,Usuarios.Tipo_Identificacion";
 
     public SolicitudService(IUnitOfWork unitOfWork, IMapper mapper, INumeroSolicitudService numeroSolicitudService, IUsuarioService usuarioService)
     {
@@ -77,7 +79,7 @@ public class SolicitudService : ISolicitudService
 
     public async Task<IEnumerable<SolicitudResponse>> GetAll()
     {
-        IEnumerable<Solicitudes?> data = await _unitOfWork.SolicitudRepository.ReadAll();
+        IEnumerable<Solicitudes?> data = await _unitOfWork.SolicitudRepository.ReadAll(includeProperties: relationsUsers);
         IEnumerable<SolicitudResponse> response = _mapper.Map<IEnumerable<SolicitudResponse>>(data);
         return response;
     }
@@ -85,7 +87,7 @@ public class SolicitudService : ISolicitudService
     public async Task<SolicitudResponse> GetById(int id)
     {
         Solicitudes? entity = await _unitOfWork.SolicitudRepository.ReadById(x => x.so_id.Equals(id),
-                                                                            includeProperties: "Estados_Solicitudes,Tipos_Solicitudes");
+                                                                            includeProperties: relationsUsers);
         SolicitudResponse response = _mapper.Map<SolicitudResponse>(entity);
         return response;
     }
@@ -98,5 +100,23 @@ public class SolicitudService : ISolicitudService
         return result > 0;
     }
 
-   
+    public async Task<IEnumerable<SolicitudResponse>> GetByNumber(string number)
+    {
+        IEnumerable<Solicitudes?> entity = await _unitOfWork.SolicitudRepository.ReadAll(x => x.so_numero_solicitud.Contains(number),
+                                                                            includeProperties: relationsUsers);
+        IEnumerable<SolicitudResponse> response = _mapper.Map<IEnumerable<SolicitudResponse>>(entity);
+        return response;
+    }
+    public async Task<IEnumerable<SolicitudResponse>> GetByEmail(string Email)
+    {
+        var usuario = await _usuarioService.GetByEmail(Email);
+
+        if (usuario is null)
+            return null;
+
+        IEnumerable<Solicitudes?> entity = await _unitOfWork.SolicitudRepository.ReadAll(x => x.so_us_id.Equals(usuario.us_id),
+                                                                            includeProperties: relationsUsers);
+        IEnumerable<SolicitudResponse> response = _mapper.Map <IEnumerable<SolicitudResponse>>(entity);
+        return response;
+    }
 }

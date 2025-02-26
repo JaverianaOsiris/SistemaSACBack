@@ -32,7 +32,7 @@ namespace WebApiSAC.Controllers
         {
             IEnumerable<SolicitudResponse> resultResponse = await _service.GetAll();
 
-            var result = _mapper.Map<IEnumerable<NumeroSolicitudResDto>>(resultResponse);
+            var result = _mapper.Map<IEnumerable<SolicitudResDto>>(resultResponse);
             return Ok(result);
         }
 
@@ -53,6 +53,24 @@ namespace WebApiSAC.Controllers
                 var solicitud = await _service.Update(numReq.so_id, numReq, cancellationToken);
                 return Ok(solicitud);
             }
+        }
+
+        [HttpGet("SolicitudNumber")]
+        public async Task<IActionResult> SolicitudNumber(string number)
+        {
+            IEnumerable<SolicitudResponse> resultResponse = await _service.GetByNumber(number);
+
+            var result = _mapper.Map< IEnumerable<SolicitudResDto>>(resultResponse);
+            return Ok(result);
+        }
+
+        [HttpGet("SolicitudEmail")]
+        public async Task<IActionResult> SolicitudEmail(string Email)
+        {
+            IEnumerable<SolicitudResponse> resultResponse = await _service.GetByEmail(Email);
+
+            var result = _mapper.Map<IEnumerable<SolicitudResDto>>(resultResponse);
+            return Ok(result);
         }
 
         #endregion
