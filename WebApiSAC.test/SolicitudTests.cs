@@ -129,8 +129,8 @@ namespace WebApiSAC.Tests
             // Arrange
             var expectedResponse = new List<SolicitudResponse>
                 {
-                    new SolicitudResponse { so_id = 1, so_numero_solicitud = "A000000001" },
-                    new SolicitudResponse { so_id = 2, so_numero_solicitud = "A000000002" }
+                    new SolicitudResponse { so_id = 1, so_numero_solicitud = "A00000001" },
+                    new SolicitudResponse { so_id = 2, so_numero_solicitud = "A00000002" }
                 };
 
             // Configurar el mock para que devuelva la lista de respuestas
@@ -150,9 +150,8 @@ namespace WebApiSAC.Tests
 
             // Verifica que el servicio GetAll haya sido llamado una vez
             _mockSolicitudService.Verify(service => service.GetAll(), Times.Once);
-        }
-        */
-
+        }*/
+        
         //Para consultar una solicitud por ID
         /*[Test]
         public async Task GetById_ReturnsOkResult_WithSolicitud()

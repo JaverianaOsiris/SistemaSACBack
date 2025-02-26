@@ -1,20 +1,29 @@
 # Visual Studio
 .vs/
 .vscode/
+
 # User-specific files
 *.user
 *.userosscache
 *.suo
 *.userprefs
+
 # Windows image file caches
 Thumbs.db
 Desktop.ini
+
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
+
 # build result
 [Dd]ebug/
 [Dd]ebugPublic/
 [Dd]ist/
-[Dd]ebug/
+
+# Directories for output files (obj, bin)
 bin/
 obj/
+
+# Excluir también los obj generados en subcarpetas
+**/obj/
+**/bin/
