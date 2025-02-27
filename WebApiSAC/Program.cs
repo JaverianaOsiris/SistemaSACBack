@@ -1,3 +1,5 @@
+using Amazon;
+using Amazon.S3;
 using AutoMapper;
 using Core.Contracts;
 using Core.Interfaces;
@@ -6,8 +8,7 @@ using Infrastructure.Data;
 using Infrastructure.Services;
 using Infrastructure.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
-using System.Configuration;
-using System;
+using Microsoft.Extensions.DependencyInjection;
 using WebApiSAC.Profiles;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -57,6 +58,11 @@ builder.Services.AddScoped<INumeroSolicitudService, NumeroSolicitudService>();
 builder.Services.AddScoped<ISolicitudService, SolicitudService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
+builder.Services.AddSingleton<IAmazonS3>(sp => new AmazonS3Client(
+    builder.Configuration["AWSS3BUCKET:AccessKey"],
+    builder.Configuration["AWSS3BUCKET:SecretKey"],
+    RegionEndpoint.GetBySystemName(builder.Configuration["AWSS3BUCKET:Region"])
+));
 
 var app = builder.Build();
 

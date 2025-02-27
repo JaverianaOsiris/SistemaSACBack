@@ -5,6 +5,7 @@ using Core.Entities;
 using Core.Request;
 using Core.Response;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using WebApiSAC.Dtos;
 
 namespace WebApiSAC.Controllers
@@ -37,14 +38,15 @@ namespace WebApiSAC.Controllers
         }
 
         [HttpPost]
-       // [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Upsert(SolicitudReqDto solicitudReq, CancellationToken cancellationToken)
+        // [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Upsert([FromForm] string solicitudReqText, [FromForm] IFormFile file, CancellationToken cancellationToken)
         {
+            SolicitudReqDto solicitudReq = JsonConvert.DeserializeObject<SolicitudReqDto>(solicitudReqText);
             var numReq = _mapper.Map<SolicitudRequest>(solicitudReq);
             if (numReq.so_id == 0)
             {
-                    
-                var solicitud = await _service.Add(numReq, cancellationToken);
+
+                var solicitud = await _service.Add(numReq, file, cancellationToken);
                 return Ok(solicitud);
 
             }

@@ -1,12 +1,13 @@
 ﻿using Core.Request;
 using Core.Response;
+using Microsoft.AspNetCore.Http;
 
 namespace Core.Contracts;
 
 public interface ISolicitudService
 {
     #region CRUD
-    public Task<SolicitudResponse> Add(SolicitudRequest request, CancellationToken cancellationToken);
+    public Task<SolicitudResponse> Add(SolicitudRequest request, IFormFile file, CancellationToken cancellationToken);
     public Task<bool> Delete(int id, CancellationToken cancellationToken);
     public Task<bool> Update(int id, SolicitudRequest request, CancellationToken cancellationToken);
     public Task<IEnumerable<SolicitudResponse>> GetAll();

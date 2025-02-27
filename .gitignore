@@ -27,3 +27,4 @@ obj/
 # Excluir también los obj generados en subcarpetas
 **/obj/
 **/bin/
+/WebApiSAC/appsettings.json

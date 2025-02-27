@@ -1,10 +1,14 @@
-﻿using AutoMapper;
+﻿using Amazon.S3.Transfer;
+using Amazon.S3;
+using AutoMapper;
 using Core.Contracts;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Request;
 using Core.Response;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 
 namespace Infrastructure.Services;
 
@@ -15,17 +19,25 @@ public class SolicitudService : ISolicitudService
     private readonly INumeroSolicitudService _numeroSolicitudService;
     private readonly IUsuarioService _usuarioService;
     string relationsUsers = "Estados_Solicitudes,Tipos_Solicitudes,Usuarios,Usuarios.Tipo_Identificacion";
+    private readonly IAmazonS3 _s3Client;
+    private readonly string _bucketName;
+    private readonly string _bucketRegion;
 
-    public SolicitudService(IUnitOfWork unitOfWork, IMapper mapper, INumeroSolicitudService numeroSolicitudService, IUsuarioService usuarioService)
+
+    public SolicitudService(IUnitOfWork unitOfWork, IMapper mapper, INumeroSolicitudService numeroSolicitudService, IUsuarioService usuarioService, IAmazonS3 s3Client, IConfiguration configuration)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _numeroSolicitudService = numeroSolicitudService;
         _usuarioService = usuarioService;
+        _s3Client = s3Client;
+        _bucketName = configuration["AWSS3BUCKET:BucketName"];
+        _bucketRegion = configuration["AWSS3BUCKET:Region"];
     }
 
-    public async Task<SolicitudResponse> Add(SolicitudRequest request, CancellationToken cancellationToken)
+    public async Task<SolicitudResponse> Add(SolicitudRequest request, IFormFile file, CancellationToken cancellationToken)
     {
+        string nomFile = "";
         Solicitudes entity = _mapper.Map<Solicitudes>(request);
 
         var usuario = await _usuarioService.GetByEmail(request.Usuario.us_correo) ;
@@ -53,6 +65,13 @@ public class SolicitudService : ISolicitudService
         var numeroSolicitud = await _numeroSolicitudService.Add(cancellationToken);
 
         entity.so_numero_solicitud = numeroSolicitud.ns_numero;
+
+        //Carga el documento
+       if(file is not null && file.Length > 0)
+            nomFile = await UploadFile(file);
+
+       if (nomFile != "")
+            entity.url_image = nomFile;
 
         await _unitOfWork.SolicitudRepository.Create(entity, cancellationToken);
         int result = await _unitOfWork.SaveChangesAsync(cancellationToken);
@@ -118,5 +137,41 @@ public class SolicitudService : ISolicitudService
                                                                             includeProperties: relationsUsers);
         IEnumerable<SolicitudResponse> response = _mapper.Map <IEnumerable<SolicitudResponse>>(entity);
         return response;
+    }
+
+
+    private async Task<string> UploadFile(IFormFile file)
+    {
+        
+        try
+        {
+            // Generar un nombre único para el archivo (se puede usar un GUID o cualquier otra lógica)
+            var fileKey = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+
+            // Subir el archivo a S3
+            var fileTransferUtility = new TransferUtility(_s3Client);
+            using (var stream = file.OpenReadStream())
+            {
+                var uploadRequest = new TransferUtilityUploadRequest
+                {
+                    BucketName = _bucketName,
+                    Key = fileKey,
+                    InputStream = stream,
+                    ContentType = file.ContentType
+                };
+
+                await fileTransferUtility.UploadAsync(uploadRequest);
+            }
+
+            // Obtener la URL pública del archivo
+            var fileUrl = $"https://{_bucketName}.s3.{_bucketRegion}.amazonaws.com/{fileKey}";
+
+            // Retornar la URL del archivo cargado
+            return fileUrl;
+        }
+        catch (Exception ex)
+        {
+            return ex.Message.ToString();
+        }
     }
 }
