@@ -47,7 +47,7 @@ public class MappingProfiles:Profile
             .ForMember(dest => dest.so_fecha_creacion, opt => opt.MapFrom(src => src.so_fecha_creacion))
             .ForMember(dest => dest.so_es_id, opt => opt.MapFrom(src => src.so_es_id))
             .ForMember(dest => dest.so_us_id, opt => opt.MapFrom(src => src.so_us_id))
-            .ForMember(dest => dest.url_image, opt => opt.MapFrom(src => src.url_image))
+            .ForMember(dest => dest.so_url_image, opt => opt.MapFrom(src => src.so_url_image))
             .ForMember(dest => dest.Usuarios, opt => opt.MapFrom(src => src.Usuarios))
             .ForMember(dest => dest.Tipos_Solicitudes, opt => opt.MapFrom(src => src.Tipos_Solicitudes))
             .ForMember(dest => dest.Estados_Solicitudes, opt => opt.MapFrom(src => src.Estados_Solicitudes));

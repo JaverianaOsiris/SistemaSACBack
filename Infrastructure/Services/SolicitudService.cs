@@ -71,7 +71,7 @@ public class SolicitudService : ISolicitudService
             nomFile = await UploadFile(file);
 
        if (nomFile != "")
-            entity.url_image = nomFile;
+            entity.so_url_image = nomFile;
 
         await _unitOfWork.SolicitudRepository.Create(entity, cancellationToken);
         int result = await _unitOfWork.SaveChangesAsync(cancellationToken);
