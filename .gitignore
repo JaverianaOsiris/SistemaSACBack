@@ -24,7 +24,13 @@ ScaffoldingReadMe.txt
 bin/
 obj/
 
-# Excluir también los obj generados en subcarpetas
+# Excluir los archivos generados dentro de obj/ y subcarpetas
 **/obj/
 **/bin/
+/WebApiSAC/appsettings.json
+
+# Excluir archivos generados de NuGet
+**/*.nuget.props
+**/*.nuget.cache
+**/*.nuget.dg.json
 /WebApiSAC/appsettings.json

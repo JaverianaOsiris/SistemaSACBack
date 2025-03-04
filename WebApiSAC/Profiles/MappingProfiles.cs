@@ -82,7 +82,8 @@ public class MappingProfiles:Profile
             .ForMember(dest => dest.us_nombre, opt => opt.MapFrom(src => src.us_nombre))
             .ForMember(dest => dest.us_telefono, opt => opt.MapFrom(src => src.us_telefono))
             .ForMember(dest => dest.us_ti_id, opt => opt.MapFrom(src => src.us_ti_id))
-            .ForMember(dest => dest.Tipo_Identificacion, opt => opt.MapFrom(src => src.Tipo_Identificacion));
+            .ForMember(dest => dest.Tipo_Identificacion, opt => opt.MapFrom(src => src.Tipo_Identificacion))
+            .ForMember(dest => dest.Tipos_Usuarios, opt => opt.MapFrom(src => src.Tipos_Usuarios));
 
         CreateMap<Usuarios, UsuarioRequest>()
             .ForMember(dest => dest.us_id, opt => opt.MapFrom(src => src.us_id))
@@ -108,6 +109,7 @@ public class MappingProfiles:Profile
         CreateMap<Tipo_Identificacion, TipoIdentificacionResponse>()
             .ForMember(dest => dest.ti_id, opt => opt.MapFrom(src => src.ti_id))
             .ForMember(dest => dest.ti_descripcion, opt => opt.MapFrom(src => src.ti_descripcion));
+
 
         CreateMap<TipoIdentificacionResponse, Tipo_Identificacion>()
             .ForMember(dest => dest.ti_id, opt => opt.MapFrom(src => src.ti_id))

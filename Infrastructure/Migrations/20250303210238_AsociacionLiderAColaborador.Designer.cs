@@ -4,6 +4,7 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250303210238_AsociacionLiderAColaborador")]
+    partial class AsociacionLiderAColaborador
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,7 +70,7 @@ namespace Infrastructure.Migrations
                     b.Property<string>("col_apellido")
                         .HasColumnType("longtext");
 
-                    b.Property<int?>("col_col_id_lider")
+                    b.Property<int>("col_col_id_lider")
                         .HasColumnType("int");
 
                     b.Property<string>("col_email")
@@ -176,10 +179,10 @@ namespace Infrastructure.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("so_id"));
 
-                    b.Property<int?>("so_col_id")
+                    b.Property<int?>("Colaboradorescol_id")
                         .HasColumnType("int");
 
-                    b.Property<int?>("so_col_id_colaborador_modificacion")
+                    b.Property<int>("so_col_id")
                         .HasColumnType("int");
 
                     b.Property<string>("so_descripcion")
@@ -193,6 +196,9 @@ namespace Infrastructure.Migrations
 
                     b.Property<DateTime>("so_fecha_modificacion")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<int>("so_id_colaborador_modificacion")
+                        .HasColumnType("int");
 
                     b.Property<string>("so_numero_solicitud")
                         .HasColumnType("longtext");
@@ -214,7 +220,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("so_id");
 
-                    b.HasIndex("so_col_id_colaborador_modificacion");
+                    b.HasIndex("Colaboradorescol_id");
 
                     b.HasIndex("so_es_id");
 
@@ -307,6 +313,9 @@ namespace Infrastructure.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("us_id"));
 
+                    b.Property<int?>("Tipos_Usuariostu_id")
+                        .HasColumnType("int");
+
                     b.Property<string>("us_apellido")
                         .HasColumnType("longtext");
 
@@ -331,9 +340,9 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("us_id");
 
-                    b.HasIndex("us_ti_id");
+                    b.HasIndex("Tipos_Usuariostu_id");
 
-                    b.HasIndex("us_tu_id");
+                    b.HasIndex("us_ti_id");
 
                     b.ToTable("Usuarios");
                 });
@@ -565,7 +574,9 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Core.Entities.Colaboradores", "Colaborador_Lider")
                         .WithMany()
-                        .HasForeignKey("col_col_id_lider");
+                        .HasForeignKey("col_col_id_lider")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Core.Entities.Tipos_Colaboradores", "Tipos_Colaboradores")
                         .WithMany()
@@ -617,7 +628,7 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Core.Entities.Colaboradores", "Colaboradores")
                         .WithMany()
-                        .HasForeignKey("so_col_id_colaborador_modificacion");
+                        .HasForeignKey("Colaboradorescol_id");
 
                     b.HasOne("Core.Entities.Estados_Solicitudes", "Estados_Solicitudes")
                         .WithMany()
@@ -648,15 +659,13 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Core.Entities.Usuarios", b =>
                 {
+                    b.HasOne("Core.Entities.Tipos_Usuarios", "Tipos_Usuarios")
+                        .WithMany()
+                        .HasForeignKey("Tipos_Usuariostu_id");
+
                     b.HasOne("Core.Entities.Tipo_Identificacion", "Tipo_Identificacion")
                         .WithMany()
                         .HasForeignKey("us_ti_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Core.Entities.Tipos_Usuarios", "Tipos_Usuarios")
-                        .WithMany()
-                        .HasForeignKey("us_tu_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -4,6 +4,7 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250303212133_AjusteTanlaUsariosYSolicitudes2")]
+    partial class AjusteTanlaUsariosYSolicitudes2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -176,10 +179,10 @@ namespace Infrastructure.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("so_id"));
 
-                    b.Property<int?>("so_col_id")
+                    b.Property<int>("so_col_id")
                         .HasColumnType("int");
 
-                    b.Property<int?>("so_col_id_colaborador_modificacion")
+                    b.Property<int>("so_col_id_colaborador_modificacion")
                         .HasColumnType("int");
 
                     b.Property<string>("so_descripcion")
@@ -213,8 +216,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("so_id");
-
-                    b.HasIndex("so_col_id_colaborador_modificacion");
 
                     b.HasIndex("so_es_id");
 
@@ -615,10 +616,6 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Core.Entities.Solicitudes", b =>
                 {
-                    b.HasOne("Core.Entities.Colaboradores", "Colaboradores")
-                        .WithMany()
-                        .HasForeignKey("so_col_id_colaborador_modificacion");
-
                     b.HasOne("Core.Entities.Estados_Solicitudes", "Estados_Solicitudes")
                         .WithMany()
                         .HasForeignKey("so_es_id")
@@ -636,8 +633,6 @@ namespace Infrastructure.Migrations
                         .HasForeignKey("so_us_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Colaboradores");
 
                     b.Navigation("Estados_Solicitudes");
 

@@ -9,4 +9,5 @@ public class UsuarioRequestDto
     public string us_identificacion { get; set; }
     public string us_telefono { get; set; }
     public string us_correo { get; set; }
+    public int us_tu_id { get; set; }
 }

@@ -12,7 +12,7 @@ public class UsuarioService : IUsuarioService
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
-    string relationsUser = "Tipo_Identificacion";
+    string relationsUser = "Tipo_Identificacion,Tipos_Usuarios";
     public UsuarioService(IUnitOfWork unitOfWork, IMapper mapper)
     {
         _unitOfWork = unitOfWork;

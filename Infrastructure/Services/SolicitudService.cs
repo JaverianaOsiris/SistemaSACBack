@@ -18,7 +18,7 @@ public class SolicitudService : ISolicitudService
     private readonly IMapper _mapper;
     private readonly INumeroSolicitudService _numeroSolicitudService;
     private readonly IUsuarioService _usuarioService;
-    string relationsUsers = "Estados_Solicitudes,Tipos_Solicitudes,Usuarios,Usuarios.Tipo_Identificacion";
+    string relationsUsers = "Estados_Solicitudes,Tipos_Solicitudes,Usuarios,Usuarios.Tipo_Identificacion,Usuarios.Tipos_Usuarios";
     private readonly IAmazonS3 _s3Client;
     private readonly string _bucketName;
     private readonly string _bucketRegion;
