@@ -16,7 +16,7 @@ public class Solicitudes
     public int? so_col_id { get; set; }
     public string so_observaciones { get; set; }
     public string so_respuesta { get; set; }
-    public DateTime so_fecha_modificacion { get; set; }
+    public DateTime so_fecha_modificacion { get; set; } = DateTime.Now;
     public int? so_col_id_colaborador_modificacion { get; set; }
 
     // Navegación a la entidad Tipos_Solicitudes

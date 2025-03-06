@@ -9,7 +9,9 @@ public class UnitOfWork:IUnitOfWork
     private readonly ApplicationDbContext _context;
     public INumeroSolicitudRepository NumeroSolicitudRepository { get; private set; }
     public ISolicitudRepository SolicitudRepository { get; private set; }
-    public IUsuarioRepository UsuarioRepository { get; private set; }   
+    public IUsuarioRepository UsuarioRepository { get; private set; }
+    public ICantidadSolicitudRepository CantidadSolicitudRepository { get; private set; }
+    public IColaboradorRepository ColaboradorRepository { get; private set; }
 
     public UnitOfWork(ApplicationDbContext context)
     {
@@ -17,6 +19,8 @@ public class UnitOfWork:IUnitOfWork
         SolicitudRepository = new SolicitudRepository(_context);
         NumeroSolicitudRepository = new NumeroSolicitudRepository(_context);
         UsuarioRepository = new UsuarioRepository(_context);
+        CantidadSolicitudRepository = new CantidadSolicitudRepository(_context);
+        ColaboradorRepository = new ColaboradorRepository(_context);
     }
 
     public void Dispose()

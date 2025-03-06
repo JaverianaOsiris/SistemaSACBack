@@ -26,12 +26,12 @@ builder.Services.AddDbContextPool<ApplicationDbContext>(options =>
     options.UseMySql(connetionString, ServerVersion.AutoDetect(connetionString));
 });
 
-// Configura Kestrel para escuchar en el puerto 5000
-builder.WebHost.ConfigureKestrel(options =>
-{
-    // Escucha en todas las interfaces en el puerto 5000
-    options.ListenAnyIP(5000);
-});
+//// Configura Kestrel para escuchar en el puerto 5000
+//builder.WebHost.ConfigureKestrel(options =>
+//{
+//    // Escucha en todas las interfaces en el puerto 5000
+//    options.ListenAnyIP(5000);
+//});
 
 var corsPolicyName = "AllowAll";
 
@@ -57,6 +57,8 @@ builder.Services.AddScoped<IAppConfig, AppConfig>();
 builder.Services.AddScoped<INumeroSolicitudService, NumeroSolicitudService>();
 builder.Services.AddScoped<ISolicitudService, SolicitudService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<ICantidadSolicitudService, CantidadSolicitudService>();
+builder.Services.AddScoped<IColaboradorService, ColaboradorService>();
 
 builder.Services.AddSingleton<IAmazonS3>(sp => new AmazonS3Client(
     builder.Configuration["AWSS3BUCKET:AccessKey"],

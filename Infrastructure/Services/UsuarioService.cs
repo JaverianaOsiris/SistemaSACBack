@@ -69,6 +69,7 @@ public class UsuarioService : IUsuarioService
     public async Task<bool> Update(int id, UsuarioRequest request, CancellationToken cancellationToken)
     {
         Usuarios entity = _mapper.Map<Usuarios>(request);
+        entity.us_id = id;
         await _unitOfWork.UsuarioRepository.Update(id, entity, cancellationToken);
         int result = await _unitOfWork.SaveChangesAsync(cancellationToken);
         return result > 0;

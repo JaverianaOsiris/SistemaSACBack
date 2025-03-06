@@ -63,6 +63,7 @@ public class NumeroSolicitudService : INumeroSolicitudService
     public async Task<bool> Update(int id, NumeroSolicitudRequest request, CancellationToken cancellationToken)
     {
         Numeros_Solicitudes entity = _mapper.Map<Numeros_Solicitudes>(request);
+        entity.ns_id = id;
         await _unitOfWork.NumeroSolicitudRepository.Update(id, entity, cancellationToken);
         int result = await _unitOfWork.SaveChangesAsync(cancellationToken);
         return result > 0;
