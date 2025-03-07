@@ -51,7 +51,8 @@ public class MappingProfiles:Profile
             .ForMember(dest => dest.Usuarios, opt => opt.MapFrom(src => src.Usuarios))
             .ForMember(dest => dest.Tipos_Solicitudes, opt => opt.MapFrom(src => src.Tipos_Solicitudes))
             .ForMember(dest => dest.Estados_Solicitudes, opt => opt.MapFrom(src => src.Estados_Solicitudes))
-            .ForMember(dest => dest.Colaboradores, opt => opt.MapFrom(src => src.Colaboradores));
+            .ForMember(dest => dest.Colaboradores, opt => opt.MapFrom(src => src.Colaboradores))
+            .ForMember(dest => dest.SolicitudApelacion, opt => opt.MapFrom(src => src.SolicitudApelacion));
 
         CreateMap<SolicitudResponse, Solicitudes>()
             .ForMember(dest => dest.so_id, opt => opt.MapFrom(src => src.so_id))
@@ -64,7 +65,8 @@ public class MappingProfiles:Profile
             .ForMember(dest => dest.Usuarios, opt => opt.MapFrom(src => src.Usuarios))
             .ForMember(dest => dest.Tipos_Solicitudes, opt => opt.MapFrom(src => src.Tipos_Solicitudes))
             .ForMember(dest => dest.Estados_Solicitudes, opt => opt.MapFrom(src => src.Estados_Solicitudes))
-            .ForMember(dest => dest.Colaboradores, opt => opt.MapFrom(src => src.Colaboradores));
+            .ForMember(dest => dest.Colaboradores, opt => opt.MapFrom(src => src.Colaboradores))
+            .ForMember(dest => dest.SolicitudApelacion, opt => opt.MapFrom(src => src.SolicitudApelacion));
 
         CreateMap<IEnumerable<Solicitudes>, IEnumerable<SolicitudResponse>>()
             .ConvertUsing((src, dest, context) => src.Select(x => context.Mapper.Map<SolicitudResponse>(x)).ToList());

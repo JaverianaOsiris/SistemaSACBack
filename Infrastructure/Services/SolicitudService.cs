@@ -20,7 +20,7 @@ public class SolicitudService : ISolicitudService
     private readonly IUsuarioService _usuarioService;
     private readonly ICantidadSolicitudService _cantidadSolicitudService;
     private readonly IColaboradorService _colaboradorService;
-    string relationsUsers = "Estados_Solicitudes,Tipos_Solicitudes,Usuarios,Usuarios.Tipo_Identificacion,Usuarios.Tipos_Usuarios,Colaboradores";
+    string relationsUsers = "Estados_Solicitudes,Tipos_Solicitudes,SolicitudApelacion,Usuarios,Usuarios.Tipo_Identificacion,Usuarios.Tipos_Usuarios,Colaboradores";
     private readonly IAmazonS3 _s3Client;
     private readonly string _bucketName;
     private readonly string _bucketRegion;

@@ -50,6 +50,11 @@ public class ApplicationDbContext : IdentityDbContext
                 .WithMany()
                 .HasForeignKey(s => s.so_col_id_colaborador_modificacion)
                 .IsRequired(false);
+        builder.Entity<Solicitudes>()
+                .HasOne(s => s.SolicitudApelacion)
+                .WithMany()
+                .HasForeignKey(s => s.so_so_id)
+                .IsRequired(false);
 
         builder.Entity<Usuarios>()
                 .HasOne(s => s.Tipo_Identificacion)  
