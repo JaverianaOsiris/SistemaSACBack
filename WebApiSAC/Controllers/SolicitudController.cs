@@ -7,6 +7,7 @@ using Core.Response;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using WebApiSAC.Dtos;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WebApiSAC.Controllers
 {
@@ -73,6 +74,27 @@ namespace WebApiSAC.Controllers
 
             var result = _mapper.Map<IEnumerable<SolicitudResDto>>(resultResponse);
             return Ok(result);
+        }
+
+        [HttpGet("SolicitudGetColaborator")]
+        public async Task<IActionResult> SolicitudGetColaborator(int so_col_id, int so_es_id)
+        {
+            IEnumerable<SolicitudResponse> resultResponse = await _service.GetByColaborator(so_col_id, so_es_id);
+
+            var result = _mapper.Map<IEnumerable<SolicitudResDto>>(resultResponse);
+            return Ok(result);
+        }
+
+        [HttpPost("RespuestaSolicitud")]
+        // [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RespuestaSolicitud(SolicitudReqDto solicitudReqDto, CancellationToken cancellationToken)
+        {
+
+            var solicitud = _mapper.Map<SolicitudRequest>(solicitudReqDto);
+
+            var solicitudResuelta = await _service.Update(solicitud.so_id, solicitud, cancellationToken);
+            return Ok(solicitudResuelta);
+
         }
 
         #endregion

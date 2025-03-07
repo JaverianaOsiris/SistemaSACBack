@@ -81,7 +81,7 @@ public class SolicitudService : ISolicitudService
 
         var asignar = await AsignarSolicitudAgente(entity , cancellationToken);
         entity.so_col_id = asignar;
-
+        entity.so_col_id_colaborador_modificacion = asignar;
         await _unitOfWork.SolicitudRepository.Create(entity, cancellationToken);
         int result = await _unitOfWork.SaveChangesAsync(cancellationToken);
 
@@ -121,13 +121,52 @@ public class SolicitudService : ISolicitudService
         return response;
     }
 
-    public async Task<bool> Update(int id, SolicitudRequest request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<SolicitudResponse>> GetByColaborator(int so_col_id, int so_es_id)
     {
-        Solicitudes entity = _mapper.Map<Solicitudes>(request);
-        entity.so_id = id;
+        IEnumerable<Solicitudes?> entity;
+
+        if (so_es_id == 0)
+        {
+            // Si so_estado es 0, no aplicar filtro sobre el estado y retornar todos
+            entity = await _unitOfWork.SolicitudRepository.ReadAll(x => x.so_col_id.Equals(so_col_id),
+                                                                      includeProperties: relationsUsers);
+        }
+        else
+        {
+            // Si so_estado es diferente de 0, aplicar el filtro de so_estado = 1
+            entity = await _unitOfWork.SolicitudRepository.ReadAll(x => x.so_col_id.Equals(so_col_id) && x.so_es_id == so_es_id,
+                                                                      includeProperties: relationsUsers);
+        }
+        IEnumerable<SolicitudResponse> response = _mapper.Map<IEnumerable<SolicitudResponse>>(entity);
+        return response;
+    }
+
+    public async Task<SolicitudResponse> Update(int id, SolicitudRequest request, CancellationToken cancellationToken)
+    {
+        //Solicitudes entity = _mapper.Map<Solicitudes>(request);
+
+        SolicitudResponse entityNew = await GetById(id);
+
+        Solicitudes entity = _mapper.Map<Solicitudes>(entityNew);
+        entity.so_es_id = entity.so_es_id;
+        entity.so_col_id = request.so_col_id;
+        entity.so_respuesta = request.so_respuesta;
+        entity.so_fecha_modificacion = DateTime.Now;
+
         await _unitOfWork.SolicitudRepository.Update(id, entity, cancellationToken);
         int result = await _unitOfWork.SaveChangesAsync(cancellationToken);
-        return result > 0;
+        if (result > 0)
+        {
+            var entidadNueva = await GetById(entity.so_id);
+
+            var entityResponse = _mapper.Map<SolicitudResponse>(entidadNueva);
+
+            return entityResponse;
+        }
+        else
+        {
+            return null;
+        }
     }
 
     public async Task<IEnumerable<SolicitudResponse>> GetByNumber(string number)
