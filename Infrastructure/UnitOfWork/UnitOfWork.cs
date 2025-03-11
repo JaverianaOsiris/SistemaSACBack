@@ -12,6 +12,7 @@ public class UnitOfWork:IUnitOfWork
     public IUsuarioRepository UsuarioRepository { get; private set; }
     public ICantidadSolicitudRepository CantidadSolicitudRepository { get; private set; }
     public IColaboradorRepository ColaboradorRepository { get; private set; }
+    public ILoginRepository LoginRepository { get; private set; }
 
     public UnitOfWork(ApplicationDbContext context)
     {
@@ -21,6 +22,7 @@ public class UnitOfWork:IUnitOfWork
         UsuarioRepository = new UsuarioRepository(_context);
         CantidadSolicitudRepository = new CantidadSolicitudRepository(_context);
         ColaboradorRepository = new ColaboradorRepository(_context);
+        LoginRepository = new LoginRepository(_context);
     }
 
     public void Dispose()

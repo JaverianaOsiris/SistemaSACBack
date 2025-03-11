@@ -85,9 +85,9 @@ namespace WebApiSAC.Controllers
             return Ok(result);
         }
 
-        [HttpPost("RespuestaSolicitud")]
+        [HttpPost("EditarSolicitud")]
         // [ValidateAntiForgeryToken]
-        public async Task<IActionResult> RespuestaSolicitud(SolicitudReqDto solicitudReqDto, CancellationToken cancellationToken)
+        public async Task<IActionResult> EditarSolicitud(SolicitudReqDto solicitudReqDto, CancellationToken cancellationToken)
         {
 
             var solicitud = _mapper.Map<SolicitudRequest>(solicitudReqDto);
@@ -96,7 +96,6 @@ namespace WebApiSAC.Controllers
             return Ok(solicitudResuelta);
 
         }
-
         #endregion
 
     }

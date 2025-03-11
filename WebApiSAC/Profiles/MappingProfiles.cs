@@ -187,5 +187,8 @@ public class MappingProfiles:Profile
             .ForMember(dest => dest.col_activo, opt => opt.MapFrom(src => src.col_activo))
             .ForMember(dest => dest.col_col_id_lider, opt => opt.MapFrom(src => src.col_col_id_lider));
 
+        CreateMap<LoginRequest, LoginReqDto>()
+            .ReverseMap();
+
     }
 }

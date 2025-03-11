@@ -8,4 +8,5 @@ public interface IUnitOfWork:IDisposable
     IUsuarioRepository UsuarioRepository { get; }
     ICantidadSolicitudRepository CantidadSolicitudRepository { get; }
     IColaboradorRepository ColaboradorRepository { get; }
+    ILoginRepository LoginRepository { get; }
 }

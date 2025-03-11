@@ -23,6 +23,7 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Colaboradores> Colaboradores { get; set; }
     public DbSet<Cantidad_Solicitudes> Cantidad_Solicitudes { get; set; }
     public DbSet<Historicos_Solicitudes> Historicos_Solicitudes { get; set; }
+    public DbSet<Login> Login { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -104,6 +105,11 @@ public class ApplicationDbContext : IdentityDbContext
                 .HasOne(s => s.Colaboradores)
                 .WithMany()
                 .HasForeignKey(s => s.hs_col_id);
+
+        builder.Entity<Login>()
+                .HasOne(s => s.Colaboradores)
+                .WithMany()
+                .HasForeignKey(s => s.lo_co_id);
 
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }

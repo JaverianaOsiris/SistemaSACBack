@@ -143,15 +143,18 @@ public class SolicitudService : ISolicitudService
 
     public async Task<SolicitudResponse> Update(int id, SolicitudRequest request, CancellationToken cancellationToken)
     {
-        //Solicitudes entity = _mapper.Map<Solicitudes>(request);
 
         SolicitudResponse entityNew = await GetById(id);
 
         Solicitudes entity = _mapper.Map<Solicitudes>(entityNew);
-        entity.so_es_id = entity.so_es_id;
+        entity.so_es_id = request.so_es_id;
         entity.so_col_id = request.so_col_id;
-        entity.so_respuesta = request.so_respuesta;
+        if (request.so_respuesta != null)
+            entity.so_respuesta = request.so_respuesta;
         entity.so_fecha_modificacion = DateTime.Now;
+
+        if (entity.so_so_id == 0)
+            entity.so_so_id = null;
 
         await _unitOfWork.SolicitudRepository.Update(id, entity, cancellationToken);
         int result = await _unitOfWork.SaveChangesAsync(cancellationToken);
