@@ -9,6 +9,7 @@ using Core.Response;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using System.Threading;
 
 namespace Infrastructure.Services;
 
@@ -91,6 +92,8 @@ public class SolicitudService : ISolicitudService
 
             var entityResponse = _mapper.Map<SolicitudResponse>(entidadNueva);
 
+            await GrabarHistorico(entityResponse, "Creacion", cancellationToken);
+
             return entityResponse;
         }
         else
@@ -163,6 +166,8 @@ public class SolicitudService : ISolicitudService
             var entidadNueva = await GetById(entity.so_id);
 
             var entityResponse = _mapper.Map<SolicitudResponse>(entidadNueva);
+
+            await GrabarHistorico(entityResponse, "Actualizacion", cancellationToken);
 
             return entityResponse;
         }
@@ -311,5 +316,25 @@ public class SolicitudService : ISolicitudService
             }
                 
         }
+    }
+
+    private async Task<int> GrabarHistorico(SolicitudResponse entityResponse, string accion, CancellationToken cancellationToken) 
+    {
+        var historico = new HistoricoSolicitudRequest
+        {
+            hs_so_id = entityResponse.so_id,
+            hs_es_id = entityResponse.so_es_id,
+            hs_col_id = entityResponse.so_col_id,
+            hs_detalle = accion,
+            hs_fecha = DateTime.Now
+        };
+
+        var his = new HistoricoSolicitudService(_unitOfWork, _mapper);
+        var response = await his.Add(historico, cancellationToken);
+
+        if (response != null)
+            return 0;
+        else
+            return 1;
     }
 }

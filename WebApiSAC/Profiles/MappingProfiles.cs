@@ -190,5 +190,36 @@ public class MappingProfiles:Profile
         CreateMap<LoginRequest, LoginReqDto>()
             .ReverseMap();
 
+        CreateMap<HistoricoSolicitudRequest, HistoricoSolicitudReqDto>()
+            .ReverseMap();
+
+        CreateMap<HistoricoSolicitudResponse, HistoricoSolicitudResDto>()
+            .ReverseMap();
+
+        CreateMap<Historicos_Solicitudes, HistoricoSolicitudResponse>()
+            .ForMember(dest => dest.hs_id, opt => opt.MapFrom(src => src.hs_id))
+            .ForMember(dest => dest.hs_so_id, opt => opt.MapFrom(src => src.hs_so_id))
+            .ForMember(dest => dest.hs_es_id, opt => opt.MapFrom(src => src.hs_es_id))
+            .ForMember(dest => dest.hs_col_id, opt => opt.MapFrom(src => src.hs_col_id))
+            .ForMember(dest => dest.hs_detalle, opt => opt.MapFrom(src => src.hs_detalle))
+            .ForMember(dest => dest.hs_fecha, opt => opt.MapFrom(src => src.hs_fecha));
+
+        CreateMap<Historicos_Solicitudes, HistoricoSolicitudRequest>()
+            .ForMember(dest => dest.hs_so_id, opt => opt.MapFrom(src => src.hs_so_id))
+            .ForMember(dest => dest.hs_es_id, opt => opt.MapFrom(src => src.hs_es_id))
+            .ForMember(dest => dest.hs_col_id, opt => opt.MapFrom(src => src.hs_col_id))
+            .ForMember(dest => dest.hs_detalle, opt => opt.MapFrom(src => src.hs_detalle))
+            .ForMember(dest => dest.hs_fecha, opt => opt.MapFrom(src => src.hs_fecha));
+
+        CreateMap<HistoricoSolicitudRequest, Historicos_Solicitudes>()
+            .ForMember(dest => dest.hs_so_id, opt => opt.MapFrom(src => src.hs_so_id))
+            .ForMember(dest => dest.hs_es_id, opt => opt.MapFrom(src => src.hs_es_id))
+            .ForMember(dest => dest.hs_col_id, opt => opt.MapFrom(src => src.hs_col_id))
+            .ForMember(dest => dest.hs_detalle, opt => opt.MapFrom(src => src.hs_detalle))
+            .ForMember(dest => dest.hs_fecha, opt => opt.MapFrom(src => src.hs_fecha));
+
+        CreateMap<IEnumerable<Historicos_Solicitudes>, IEnumerable<HistoricoSolicitudResponse>>()
+            .ConvertUsing((src, dest, context) => src.Select(x => context.Mapper.Map<HistoricoSolicitudResponse>(x)).ToList());
+
     }
 }

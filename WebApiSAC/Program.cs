@@ -60,6 +60,7 @@ builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<ICantidadSolicitudService, CantidadSolicitudService>();
 builder.Services.AddScoped<IColaboradorService, ColaboradorService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddScoped<IHistoricoSolicitudService, HistoricoSolicitudService>();
 
 builder.Services.AddSingleton<IAmazonS3>(sp => new AmazonS3Client(
     builder.Configuration["AWSS3BUCKET:AccessKey"],
