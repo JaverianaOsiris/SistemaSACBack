@@ -34,6 +34,7 @@ builder.Services.AddDbContextPool<ApplicationDbContext>(options =>
 //});
 
 var corsPolicyName = "AllowAll";
+var corsPolicyNameEsp = "AllowSecureOriginsWithCredentials";
 
 builder.Services.AddCors(options =>
 {
@@ -42,6 +43,14 @@ builder.Services.AddCors(options =>
         policy.AllowAnyOrigin()
                 .AllowAnyMethod()
                 .AllowAnyHeader();
+    });
+
+    options.AddPolicy(corsPolicyNameEsp, policy =>
+    {
+        policy.WithOrigins("https://main.d3qlabcxqrorrx.amplifyapp.com/")  // Especifica los orígenes HTTPS permitidos
+              .AllowAnyMethod()  // Permite cualquier método HTTP
+              .AllowAnyHeader()  // Permite cualquier cabecera
+              .AllowCredentials();  // Permite el envío de credenciales (cookies, tokens, etc.)
     });
 });
 
@@ -85,6 +94,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors(corsPolicyName);
+app.UseCors(corsPolicyNameEsp);
 
 app.UseHttpsRedirection();
 

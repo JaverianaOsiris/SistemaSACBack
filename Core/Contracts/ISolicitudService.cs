@@ -15,5 +15,6 @@ public interface ISolicitudService
     public Task<IEnumerable<SolicitudResponse>> GetByNumber(string number);
     public Task<IEnumerable<SolicitudResponse>> GetByEmail(string email);
     public Task<IEnumerable<SolicitudResponse>> GetByColaborator(int so_col_id, int so_es_id);
+    public Task<IEnumerable<ReporteResponse>> GetReportePorFechas(DesempenoRequest desempenoRequest);
     #endregion
 }

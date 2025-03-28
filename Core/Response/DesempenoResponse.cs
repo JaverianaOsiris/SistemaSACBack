@@ -12,4 +12,5 @@ public class EstadoSolicitudesResponse
 {
     public string Estado { get; set; } // Nombre del estado de la solicitud
     public int Cantidad { get; set; } // La cantidad de solicitudes en ese estado y colaborador
+    public List<TipoSolicitudResponse> Tipos { get; set; }
 }

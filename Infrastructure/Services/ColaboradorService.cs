@@ -103,7 +103,7 @@ public class ColaboradorService : IColaboradorService
 
         if (desempenoRequest.so_fec_final != null)
         {
-            fechaFin = Convert.ToDateTime(desempenoRequest.so_fec_ini + " 23:59:59");
+            fechaFin = Convert.ToDateTime(desempenoRequest.so_fec_final + " 23:59:59");
         }
 
         // Filtro para el rango de fechas

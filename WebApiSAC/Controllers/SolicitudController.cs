@@ -96,6 +96,17 @@ namespace WebApiSAC.Controllers
             return Ok(solicitudResuelta);
 
         }
+
+        [HttpPost("ConsultaReporteGral")]
+        public async Task<IActionResult> ConsultaReporteGral(DesempenoReqDto desempenoReqDto, CancellationToken cancellationToken)
+        {
+
+            var desempeno = _mapper.Map<DesempenoRequest>(desempenoReqDto);
+
+            var solicitudResuelta = await _service.GetReportePorFechas(desempeno);
+            return Ok(solicitudResuelta);
+
+        }
         #endregion
 
     }

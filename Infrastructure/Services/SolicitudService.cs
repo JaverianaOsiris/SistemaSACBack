@@ -337,4 +337,108 @@ public class SolicitudService : ISolicitudService
         else
             return 1;
     }
+
+    //public async Task<IEnumerable<ReporteResponse>> GetReportePorFechas(DesempenoRequest desempenoReqDto)
+    //{
+    //    DateTime fechaInicio = Convert.ToDateTime(desempenoReqDto.so_fec_ini);
+    //    DateTime fechaFin = Convert.ToDateTime(desempenoReqDto.so_fec_final + " 23:59:59");
+
+    //    // Obtener las solicitudes dentro del rango de fechas
+    //    var solicitudes = await _unitOfWork.SolicitudRepository.ReadAll(x => x.so_fecha_creacion >= fechaInicio && x.so_fecha_creacion <= fechaFin, includeProperties: "Estados_Solicitudes,Tipos_Solicitudes");
+
+    //    // Crear el rango de fechas para incluir todos los días dentro del rango de fechas
+    //    var rangoFechas = Enumerable.Range(0, (fechaFin - fechaInicio).Days + 1)
+    //                                .Select(d => fechaInicio.AddDays(d))
+    //                                .ToList();
+
+    //    // Consultar las solicitudes agrupadas por fecha, estado y tipo de solicitud
+    //    var reporte = from fecha in rangoFechas
+    //                  join solicitud in solicitudes on fecha.Date equals solicitud.so_fecha_creacion.Date into solicitudesPorFecha
+    //                  from solicitud in solicitudesPorFecha.DefaultIfEmpty()
+    //                  group solicitud by new
+    //                  {
+    //                      Fecha = fecha,
+    //                      Estado = solicitud?.Estados_Solicitudes?.es_nombre_estado // Agrupar por estado
+    //                  } into g
+    //                  select new ReporteResponse
+    //                  {
+    //                      Fecha = g.Key.Fecha.ToString("yyyy-MM-dd"),  // Formato de fecha
+    //                      EstadosSolicitudes = g.GroupBy(x => x?.Estados_Solicitudes?.es_nombre_estado)
+    //                                            .Select(es => new EstadoSolicitudesResponse
+    //                                            {
+    //                                                Estado = es.Key,
+    //                                                Cantidad = es.Count(),
+    //                                                Tipos = es.GroupBy(x => x?.Tipos_Solicitudes?.ts_nombre)  // Agrupar por tipo de solicitud dentro del estado
+    //                                                          .Select(ts => new TipoSolicitudResponse
+    //                                                          {
+    //                                                              TipoSolicitud = ts.Key,
+    //                                                              Cantidad = ts.Count()
+    //                                                          }).ToList()
+    //                                            }).ToList()
+    //                  };
+
+    //    // Agrupar todos los estados dentro de una misma fecha
+    //    var reporteFinal = reporte.GroupBy(r => r.Fecha)
+    //                              .Select(r => new ReporteResponse
+    //                              {
+    //                                  Fecha = r.Key,
+    //                                  EstadosSolicitudes = r.SelectMany(es => es.EstadosSolicitudes).ToList() // Todos los estados dentro de una misma fecha
+    //                              }).ToList();
+
+    //    return reporteFinal;
+    //}
+
+    public async Task<IEnumerable<ReporteResponse>> GetReportePorFechas(DesempenoRequest desempenoReqDto)
+    {
+        DateTime fechaInicio = Convert.ToDateTime(desempenoReqDto.so_fec_ini);
+        DateTime fechaFin = Convert.ToDateTime(desempenoReqDto.so_fec_final + " 23:59:59");
+
+        // Obtener las solicitudes dentro del rango de fechas
+        var solicitudes = await _unitOfWork.SolicitudRepository.ReadAll(x => x.so_fecha_creacion >= fechaInicio && x.so_fecha_creacion <= fechaFin, includeProperties: "Estados_Solicitudes,Tipos_Solicitudes");
+
+        // Crear el rango de fechas para incluir todos los días dentro del rango de fechas
+        var rangoFechas = Enumerable.Range(0, (fechaFin - fechaInicio).Days + 1)
+                                    .Select(d => fechaInicio.AddDays(d))
+                                    .ToList();
+
+        // Consultar las solicitudes agrupadas por fecha, estado y tipo de solicitud
+        var reporte = from fecha in rangoFechas
+                      join solicitud in solicitudes on fecha.Date equals solicitud.so_fecha_creacion.Date into solicitudesPorFecha
+                      from solicitud in solicitudesPorFecha.DefaultIfEmpty()
+                      group solicitud by new
+                      {
+                          Fecha = fecha,
+                          Estado = solicitud?.Estados_Solicitudes?.es_nombre_estado // Agrupar por estado
+                      } into g
+                      select new ReporteResponse
+                      {
+                          Fecha = g.Key.Fecha.ToString("yyyy-MM-dd"),  // Formato de fecha
+                          EstadosSolicitudes = g.GroupBy(x => x?.Estados_Solicitudes?.es_nombre_estado)
+                                                .Where(es => !string.IsNullOrEmpty(es.Key))  // Filtrar estados nulos o vacíos
+                                                .Select(es => new EstadoSolicitudesResponse
+                                                {
+                                                    Estado = es.Key,
+                                                    Cantidad = es.Count(),
+                                                    Tipos = es.GroupBy(x => x?.Tipos_Solicitudes?.ts_nombre)  // Agrupar por tipo de solicitud dentro del estado
+                                                              .Where(ts => !string.IsNullOrEmpty(ts.Key))  // Filtrar tipos nulos o vacíos
+                                                              .Select(ts => new TipoSolicitudResponse
+                                                              {
+                                                                  TipoSolicitud = ts.Key,
+                                                                  Cantidad = ts.Count()
+                                                              }).ToList()
+                                                }).ToList()
+                      };
+
+        // Agrupar todos los estados dentro de una misma fecha
+        var reporteFinal = reporte.GroupBy(r => r.Fecha)
+                                  .Select(r => new ReporteResponse
+                                  {
+                                      Fecha = r.Key,
+                                      EstadosSolicitudes = r.SelectMany(es => es.EstadosSolicitudes).ToList() // Todos los estados dentro de una misma fecha
+                                  }).ToList();
+
+        return reporteFinal;
+    }
+
+
 }

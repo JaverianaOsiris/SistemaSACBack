@@ -26,7 +26,6 @@ public class ColaboradorController : BaseApiController
     }
 
     [HttpPost("ConsultaDesempeno")]
-    // [ValidateAntiForgeryToken]
     public async Task<IActionResult> ConsultaDesempeno(DesempenoReqDto desempenoReqDto, CancellationToken cancellationToken)
     {
 
