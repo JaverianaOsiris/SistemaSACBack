@@ -11,6 +11,7 @@ public interface IColaboradorService
     public Task<bool> Update(int id, ColaboradorRequest request, CancellationToken cancellationToken);
     public Task<IEnumerable<ColaboradorResponse>> GetAll();
     public Task<ColaboradorResponse> GetById(int id);
-    
+    public Task<IEnumerable<DesempenoResponse>> GetDesempeno(DesempenoRequest desempenoRequest);
+
     #endregion
 }

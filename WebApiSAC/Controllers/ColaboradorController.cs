@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Core.Contracts;
+using Core.Request;
 using Core.Response;
 using Microsoft.AspNetCore.Mvc;
 using WebApiSAC.Dtos;
@@ -24,6 +25,17 @@ public class ColaboradorController : BaseApiController
         return Ok("Escuchando");
     }
 
-    
+    [HttpPost("ConsultaDesempeno")]
+    // [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ConsultaDesempeno(DesempenoReqDto desempenoReqDto, CancellationToken cancellationToken)
+    {
+
+        var desempeno = _mapper.Map<DesempenoRequest>(desempenoReqDto);
+
+        var solicitudResuelta = await _service.GetDesempeno(desempeno);
+        return Ok(solicitudResuelta);
+
+    }
+
     #endregion
 }

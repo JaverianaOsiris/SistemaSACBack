@@ -10,4 +10,5 @@ public interface IUnitOfWork:IDisposable
     IColaboradorRepository ColaboradorRepository { get; }
     ILoginRepository LoginRepository { get; }
     IHistoricoSolicitudRepository HistoricoSolicitudRepository { get; }
+    IEstadoSolicitudRepository EstadoSolicitudRepository { get; }
 }

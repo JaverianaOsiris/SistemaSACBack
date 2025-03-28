@@ -221,5 +221,8 @@ public class MappingProfiles:Profile
         CreateMap<IEnumerable<Historicos_Solicitudes>, IEnumerable<HistoricoSolicitudResponse>>()
             .ConvertUsing((src, dest, context) => src.Select(x => context.Mapper.Map<HistoricoSolicitudResponse>(x)).ToList());
 
+        CreateMap<DesempenoRequest, DesempenoReqDto>()
+            .ReverseMap();
+
     }
 }
